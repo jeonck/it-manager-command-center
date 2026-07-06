@@ -41,6 +41,17 @@
 
 <section class="section">
   <div class="container">
+    <div class="itil-toolbar">
+      <input type="search" id="itil-search" class="itil-search" placeholder="Filter practices… (e.g. audit, incident, cost)" aria-label="Filter ITIL practices" />
+      <div class="itil-chips">
+        <button type="button" class="itil-chip" data-q="">All</button>
+        <button type="button" class="itil-chip" data-q="audit">Audit</button>
+        <button type="button" class="itil-chip" data-q="incident">Incidents</button>
+        <button type="button" class="itil-chip" data-q="cost">Cost</button>
+        <button type="button" class="itil-chip" data-q="agent">Agents</button>
+      </div>
+      <span class="itil-count" id="itil-count"></span>
+    </div>
     <div class="table-wrap">
       <table class="itil-table">
         <thead>

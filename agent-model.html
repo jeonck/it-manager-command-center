@@ -43,6 +43,43 @@
 
 <section class="section">
   <div class="container">
+    <div class="widget-panel">
+      <div class="widget-head">
+        <h3>🎚️ Try it — slide the autonomy ladder</h3>
+        <p>Agents earn permissions in levels, like employees earn trust. Drag the slider and watch what changes at each level — and what never changes.</p>
+      </div>
+      <div class="ladder">
+        <div class="ladder-track">
+          <input type="range" id="autonomy-range" min="0" max="3" step="1" value="1" aria-label="Agent autonomy level" />
+          <div class="ladder-ticks">
+            <span class="ladder-tick">L0<br /><em>Observe</em></span>
+            <span class="ladder-tick">L1<br /><em>Recommend</em></span>
+            <span class="ladder-tick">L2<br /><em>Act w/ approval</em></span>
+            <span class="ladder-tick">L3<br /><em>Auto-remediate</em></span>
+          </div>
+        </div>
+        <div class="ladder-panel">
+          <div class="ladder-panel-head">
+            <h4 id="ladder-name">L1 · Recommend</h4>
+            <span class="ladder-risk risk-none" id="ladder-risk">No risk</span>
+          </div>
+          <div class="ladder-cols">
+            <div>
+              <h5>Permissions</h5>
+              <ul class="check-list" id="ladder-perms"></ul>
+            </div>
+            <div>
+              <h5>Guardrails required</h5>
+              <p class="ladder-gates" id="ladder-gates"></p>
+              <h5>What it looks like</h5>
+              <p class="ladder-example" id="ladder-example"></p>
+            </div>
+          </div>
+          <p class="ladder-fine">Constant at every level: scoped credentials via MCP · full audit trail · kill switch · humans own the risk.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="agent-grid">
       <div class="agent-card">
         <div class="agent-icon">🎚️</div>

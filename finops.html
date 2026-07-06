@@ -52,6 +52,51 @@
       <div class="flow-node"><span class="flow-icon">📈</span>Weekly savings report<br />to leadership</div>
     </div>
 
+    <div class="widget-panel">
+      <div class="widget-head">
+        <h3>🧮 Try it — what would this loop return on your budget?</h3>
+        <p>Move the sliders to your environment. The model is illustrative, but the mechanics are exactly what the automation does.</p>
+      </div>
+      <div class="fin-calc">
+        <div class="fin-inputs">
+          <label class="fin-field">
+            <span class="fin-label">Monthly cloud spend <strong id="fin-spend-label">$250,000/mo</strong></span>
+            <input type="range" id="fin-spend" min="10" max="1000" step="10" value="250" />
+          </label>
+          <label class="fin-field">
+            <span class="fin-label">Idle / unused resources <strong id="fin-idle-label">18%</strong></span>
+            <input type="range" id="fin-idle" min="0" max="40" step="1" value="18" />
+          </label>
+          <label class="fin-field">
+            <span class="fin-label">Non-production share <strong id="fin-nonprod-label">35%</strong></span>
+            <input type="range" id="fin-nonprod" min="0" max="60" step="1" value="35" />
+          </label>
+        </div>
+        <div class="fin-results">
+          <div class="fin-row">
+            <span class="fin-row-label">Idle-resource reaping</span>
+            <div class="fin-bar-track"><div class="fin-bar" id="bar-idle"></div></div>
+            <span class="fin-row-val" id="fin-idle-save">$0</span>
+          </div>
+          <div class="fin-row">
+            <span class="fin-row-label">Off-hours scheduling</span>
+            <div class="fin-bar-track"><div class="fin-bar sched" id="bar-sched"></div></div>
+            <span class="fin-row-val" id="fin-sched-save">$0</span>
+          </div>
+          <div class="fin-row">
+            <span class="fin-row-label">Anomaly early-catch</span>
+            <div class="fin-bar-track"><div class="fin-bar anomaly" id="bar-anomaly"></div></div>
+            <span class="fin-row-val" id="fin-anomaly-save">$0</span>
+          </div>
+          <div class="fin-totals">
+            <div class="fin-total-item"><strong id="fin-total">$0/mo</strong><span>projected monthly savings</span></div>
+            <div class="fin-total-item"><strong id="fin-annual">$0/yr</strong><span>annualized</span></div>
+            <div class="fin-total-item"><strong id="fin-pct">0%</strong><span>of cloud budget returned</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="pillar-cols">
       <div class="pillar-col">
         <h4>What gets automated</h4>

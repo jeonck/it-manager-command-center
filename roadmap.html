@@ -39,33 +39,62 @@
 
 <section class="section">
   <div class="container">
+    <p class="roadmap-hint">Click a quarter to see its deliverables and exit criteria.</p>
     <ol class="roadmap">
-      <li class="roadmap-step">
+      <li class="roadmap-step" data-expandable tabindex="0" role="button" aria-expanded="false">
         <span class="step-q">Q1</span>
         <div>
-          <h4>Codify the estate</h4>
+          <h4>Codify the estate <span class="step-toggle">▾</span></h4>
           <p>Import existing infrastructure into Terraform; stand up the GitOps pipeline; asset register goes live from state. <em>First win: audit evidence on demand.</em></p>
+          <div class="step-details">
+            <ul class="check-list">
+              <li>Deliverables: Terraform modules for the top-20 systems · ArgoCD pipeline · auto-generated asset register</li>
+              <li>Process: PR template with change rationale · CODEOWNERS as approval matrix</li>
+              <li>Exit criteria: any auditor question about "who/what/when" answerable from Git in under a minute</li>
+            </ul>
+          </div>
         </div>
       </li>
-      <li class="roadmap-step">
+      <li class="roadmap-step" data-expandable tabindex="0" role="button" aria-expanded="false">
         <span class="step-q">Q2</span>
         <div>
-          <h4>Instrument &amp; alert on SLOs</h4>
+          <h4>Instrument &amp; alert on SLOs <span class="step-toggle">▾</span></h4>
           <p>Observability stack with SLO-based alerting; incident tickets auto-created with context. <em>First win: no more blank tickets at 3 a.m.</em></p>
+          <div class="step-details">
+            <ul class="check-list">
+              <li>Deliverables: SLOs for top-10 services · Prometheus/Datadog alert rules · Slack + Jira integration</li>
+              <li>Process: alert review board retires noisy alerts monthly · every page must be actionable</li>
+              <li>Exit criteria: 90% of pages carry probable cause and a linked runbook</li>
+            </ul>
+          </div>
         </div>
       </li>
-      <li class="roadmap-step">
+      <li class="roadmap-step" data-expandable tabindex="0" role="button" aria-expanded="false">
         <span class="step-q">Q3</span>
         <div>
-          <h4>Close the FinOps loop</h4>
+          <h4>Close the FinOps loop <span class="step-toggle">▾</span></h4>
           <p>Idle reaping and off-hours scheduling in enforcement mode; weekly savings ledger to leadership. <em>First win: measurable budget return.</em></p>
+          <div class="step-details">
+            <ul class="check-list">
+              <li>Deliverables: idle-detection jobs · non-prod sleep schedules · anomaly alerts to resource owners</li>
+              <li>Process: savings ledger reviewed in the weekly leadership sync · owners accountable for unit costs</li>
+              <li>Exit criteria: realized savings visible as a budget line; forecast accuracy within ±5%</li>
+            </ul>
+          </div>
         </div>
       </li>
-      <li class="roadmap-step">
+      <li class="roadmap-step" data-expandable tabindex="0" role="button" aria-expanded="false">
         <span class="step-q">Q4</span>
         <div>
-          <h4>Introduce supervised agents</h4>
+          <h4>Introduce supervised agents <span class="step-toggle">▾</span></h4>
           <p>Triage and diagnostics agents in read-only mode → approval-gated remediation for proven patterns. <em>First win: MTTR drops without headcount.</em></p>
+          <div class="step-details">
+            <ul class="check-list">
+              <li>Deliverables: triage agent (L0→L1) · MCP tool servers with scoped credentials · agent action audit log</li>
+              <li>Process: autonomy ladder reviews — an agent is promoted to L2 only after N clean supervised runs</li>
+              <li>Exit criteria: MTTR down ≥50% on covered services; zero unauthorized agent actions</li>
+            </ul>
+          </div>
         </div>
       </li>
     </ol>

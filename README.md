@@ -19,6 +19,17 @@ Plus:
 - **ITIL 4 practice mapping** — every automation traced to the practice it implements
 - **12-month adoption roadmap** — from spreadsheets to supervised autonomy
 
+## Interactive features
+
+| Page | Widget |
+|---|---|
+| Operations | **Interactive incident sim** — you play the on-call approver; approve fast or dig deeper, the MTTR outcome changes |
+| Governance | **Ask-the-Auditor console** — click real audit questions, watch them become one-second Git/OPA queries |
+| FinOps | **Savings calculator** — sliders for spend / idle % / non-prod share drive live savings KPIs |
+| AI Agent Model | **Autonomy ladder** — slide L0→L3 and see permissions, guardrails, and risk change |
+| ITIL Mapping | **Live table filter** — search box + quick chips |
+| Roadmap | **Expandable quarters** — click for deliverables and exit criteria |
+
 ## Run locally
 
 ```bash
