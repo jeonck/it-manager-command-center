@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinOps & Cost Optimization — IT Command Center</title>
+  <meta name="description" content="Treat cloud cost like an SLO: idle-resource reaping, off-hours scheduling, anomaly detection, and a weekly savings ledger reported in business terms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛰️</text></svg>" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">▲</span> IT&nbsp;Command&nbsp;Center</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="governance.html">Governance</a>
+      <a href="operations.html">Operations</a>
+      <a href="finops.html" aria-current="page">FinOps</a>
+      <a href="agent-model.html">AI Agent Model</a>
+      <a href="itil.html">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
+    </nav>
+    <a class="nav-cta" href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow fin">04 · FINOPS &amp; COST OPTIMIZATION</p>
+    <h1>The budget as a control loop</h1>
+    <p class="lede">
+      <strong>Problem:</strong> cloud bills are reviewed monthly, questioned quarterly, and understood never.
+      <strong>Answer:</strong> treat cost like an SLO — measured continuously, corrected automatically, reported in business terms.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="flow" role="img" aria-label="FinOps loop: cost and usage data to anomaly and idle detection to automated action with approval to savings report">
+      <div class="flow-node"><span class="flow-icon">🧾</span>Cost &amp; usage data<br />(AWS CUR / Azure)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><span class="flow-icon">🕵️</span>Idle &amp; anomaly<br />detection agent</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><span class="flow-icon">⚙️</span>Action: stop / resize /<br />schedule (with approval)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><span class="flow-icon">📈</span>Weekly savings report<br />to leadership</div>
+    </div>
+
+    <div class="pillar-cols">
+      <div class="pillar-col">
+        <h4>What gets automated</h4>
+        <ul class="check-list">
+          <li>Idle resources (unattached volumes, zombie VMs, oversized nodes) identified daily and reaped on schedule</li>
+          <li>Non-production environments sleep on nights and weekends — automatically, reversibly</li>
+          <li>Cost anomalies page the owner with the resource, the delta, and the likely deploy that caused it</li>
+          <li>Unit economics tracked per team and per service: cost per environment, per deployment, per customer</li>
+          <li>Savings ledger shows realized vs. projected — the report leadership actually reads</li>
+        </ul>
+      </div>
+      <div class="pillar-col">
+        <h4>Manager's framing</h4>
+        <blockquote>“Modernization isn't a cost center story. Every automation here has a line item: this script returned 38% of our cloud budget. That is bottom-line impact a CFO can verify.”</blockquote>
+        <div class="itil-badges">
+          <span class="itil-badge">FinOps Foundation · Inform / Optimize / Operate</span>
+          <span class="itil-badge">ITIL 4 · Service Financial Mgmt</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kpi-strip">
+      <div class="kpi-strip-item"><strong>↓ 38%</strong><span>Cloud spend reduction</span></div>
+      <div class="kpi-strip-item"><strong>Weekly</strong><span>Savings ledger cadence to leadership</span></div>
+      <div class="kpi-strip-item"><strong>↑</strong><span>Forecast accuracy</span></div>
+    </div>
+  </div>
+</section>
+
+<nav class="page-pager container">
+  <a class="pager-link prev" href="operations.html">← Operations</a>
+  <a class="pager-link next" href="agent-model.html">AI Agent Model →</a>
+</nav>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="brand"><span class="brand-mark">▲</span> IT Command Center</p>
+      <p class="footer-note">A portfolio project demonstrating an IT management operating model for the AI agent era.<br />Built as code, reviewed as code, deployed as code — naturally.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">Source on GitHub</a>
+      <a href="itil.html">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
+    </div>
+  </div>
+  <p class="footer-fine container">© 2026 · KPI figures are targets from lab/reference implementations, representative of published industry benchmarks.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

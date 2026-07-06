@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The AI Agent Operating Model — IT Command Center</title>
+  <meta name="description" content="Agents do the work, humans own the risk: graduated autonomy, MCP-governed tools, kill switches, and KPIs for the agents themselves." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛰️</text></svg>" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">▲</span> IT&nbsp;Command&nbsp;Center</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="governance.html">Governance</a>
+      <a href="operations.html">Operations</a>
+      <a href="finops.html">FinOps</a>
+      <a href="agent-model.html" aria-current="page">AI Agent Model</a>
+      <a href="itil.html">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
+    </nav>
+    <a class="nav-cta" href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">05 · THE AI AGENT OPERATING MODEL</p>
+    <h1>Agents do the work. Humans own the risk.</h1>
+    <p class="lede">
+      The 2026 shift isn't “AI writes code.” It's that <strong>operations itself is becoming agentic</strong> —
+      triage, remediation, cost hygiene, and compliance checks run as supervised agents.
+      The IT manager's new deliverable is the <strong>governance layer around them</strong>.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="agent-grid">
+      <div class="agent-card">
+        <div class="agent-icon">🎚️</div>
+        <h4>Graduated autonomy</h4>
+        <p>Agents earn permissions like employees do. Read-only diagnostics first; reversible actions with approval next; auto-remediation only for proven, low-blast-radius patterns.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">🧾</div>
+        <h4>Every action is a change record</h4>
+        <p>Agent actions flow through the same PR/approval pipeline as human changes. An agent that can't produce an audit trail doesn't get production access. Ever.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">🔌</div>
+        <h4>Tools over prompts (MCP)</h4>
+        <p>Agents reach systems through governed tool interfaces — Model Context Protocol servers with scoped credentials — not through pasted API keys and hope.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">🧯</div>
+        <h4>Kill switches &amp; blast-radius budgets</h4>
+        <p>Every automation has a disable flag, a rate limit, and a maximum scope. The failure mode of an agent must always be “stopped,” never “creative.”</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">📏</div>
+        <h4>Agents get KPIs too</h4>
+        <p>Precision of triage, false-page rate, savings realized, evidence completeness. If an agent's numbers slip, it gets retrained or retired — same as any process.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">🧑‍⚖️</div>
+        <h4>Human-in-the-loop by design</h4>
+        <p>Approval gates live where the risk lives: production changes, spend actions, customer-facing comms. Humans decide; agents execute and document.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="page-pager container">
+  <a class="pager-link prev" href="finops.html">← FinOps</a>
+  <a class="pager-link next" href="itil.html">ITIL Mapping →</a>
+</nav>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="brand"><span class="brand-mark">▲</span> IT Command Center</p>
+      <p class="footer-note">A portfolio project demonstrating an IT management operating model for the AI agent era.<br />Built as code, reviewed as code, deployed as code — naturally.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">Source on GitHub</a>
+      <a href="itil.html">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
+    </div>
+  </div>
+  <p class="footer-fine container">© 2026 · KPI figures are targets from lab/reference implementations, representative of published industry benchmarks.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

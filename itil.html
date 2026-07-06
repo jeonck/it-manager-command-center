@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITIL 4 Practice Mapping — IT Command Center</title>
+  <meta name="description" content="Every automation pipeline traced to the ITIL 4 practice it implements and the KPI it moves — automation with a management pedigree." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛰️</text></svg>" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">▲</span> IT&nbsp;Command&nbsp;Center</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="governance.html">Governance</a>
+      <a href="operations.html">Operations</a>
+      <a href="finops.html">FinOps</a>
+      <a href="agent-model.html">AI Agent Model</a>
+      <a href="itil.html" aria-current="page">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
+    </nav>
+    <a class="nav-cta" href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">06 · ITIL 4 PRACTICE MAPPING</p>
+    <h1>Automation with a management pedigree</h1>
+    <p class="lede">
+      Every pipeline on this site is an implementation of an established ITIL 4 practice — automation doesn't replace process discipline, it enforces it.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="table-wrap">
+      <table class="itil-table">
+        <thead>
+          <tr><th>ITIL 4 Practice</th><th>Traditional form</th><th>Implemented here as</th><th>KPI moved</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Practice">Change Enablement</td>
+            <td data-label="Traditional">CAB meetings, change forms</td>
+            <td data-label="Here">Pull-request review + policy-as-code gates; merge = approved change</td>
+            <td data-label="KPI">100% traceable changes, near-zero unauthorized drift</td>
+          </tr>
+          <tr>
+            <td data-label="Practice">Service Configuration &amp; Asset Mgmt</td>
+            <td data-label="Traditional">CMDB updated by hand, quarterly true-ups</td>
+            <td data-label="Here">CMDB generated from IaC state; drift detection reconciles continuously</td>
+            <td data-label="KPI">Audit evidence in days, not weeks</td>
+          </tr>
+          <tr>
+            <td data-label="Practice">Incident Management</td>
+            <td data-label="Traditional">Pager → war room → tribal knowledge</td>
+            <td data-label="Here">Agent triage → evidence bundle → pre-filled ticket → approved remediation</td>
+            <td data-label="KPI">MTTR ↓ 72%, false pages ↓</td>
+          </tr>
+          <tr>
+            <td data-label="Practice">Problem Management</td>
+            <td data-label="Traditional">RCA doc written weeks later, if ever</td>
+            <td data-label="Here">RCA draft generated from incident timeline within the hour</td>
+            <td data-label="KPI">Repeat-incident rate ↓</td>
+          </tr>
+          <tr>
+            <td data-label="Practice">Monitoring &amp; Event Mgmt</td>
+            <td data-label="Traditional">Static thresholds, alert fatigue</td>
+            <td data-label="Here">SLO-based alerting; agents suppress noise and enrich signal</td>
+            <td data-label="KPI">Actionable-alert ratio ↑</td>
+          </tr>
+          <tr>
+            <td data-label="Practice">Service Financial Mgmt</td>
+            <td data-label="Traditional">Monthly bill review, annual budget shock</td>
+            <td data-label="Here">Continuous FinOps loop: detect → act (with approval) → report savings weekly</td>
+            <td data-label="KPI">Cloud spend ↓ 38%, forecast accuracy ↑</td>
+          </tr>
+          <tr>
+            <td data-label="Practice">Supplier Management</td>
+            <td data-label="Traditional">Contracts in a shared drive</td>
+            <td data-label="Here">Vendor &amp; license register as versioned data with renewal/expiry automation</td>
+            <td data-label="KPI">Zero surprise renewals, license compliance</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<nav class="page-pager container">
+  <a class="pager-link prev" href="agent-model.html">← AI Agent Model</a>
+  <a class="pager-link next" href="roadmap.html">Roadmap →</a>
+</nav>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="brand"><span class="brand-mark">▲</span> IT Command Center</p>
+      <p class="footer-note">A portfolio project demonstrating an IT management operating model for the AI agent era.<br />Built as code, reviewed as code, deployed as code — naturally.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">Source on GitHub</a>
+      <a href="itil.html">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
+    </div>
+  </div>
+  <p class="footer-fine container">© 2026 · KPI figures are targets from lab/reference implementations, representative of published industry benchmarks.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

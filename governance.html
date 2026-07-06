@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Governance & Asset Management — IT Command Center</title>
+  <meta name="description" content="Make Git the system of record for the entire IT estate: Terraform, PR-approved change, policy-as-code, GitOps, and a live CMDB — audit-ready every day." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛰️</text></svg>" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">▲</span> IT&nbsp;Command&nbsp;Center</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="governance.html" aria-current="page">Governance</a>
+      <a href="operations.html">Operations</a>
+      <a href="finops.html">FinOps</a>
+      <a href="agent-model.html">AI Agent Model</a>
+      <a href="itil.html">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
+    </nav>
+    <a class="nav-cta" href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow gov">02 · IT GOVERNANCE &amp; ASSET MANAGEMENT</p>
+    <h1>The audit-ready platform</h1>
+    <p class="lede">
+      <strong>Problem:</strong> asset inventories live in spreadsheets, change history lives in people's memories,
+      and every audit becomes a three-week archaeology dig.
+      <strong>Answer:</strong> make Git the system of record for the entire estate.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="flow" role="img" aria-label="GitOps governance pipeline: Terraform to pull request review to CI policy checks to ArgoCD sync to live CMDB dashboard">
+      <div class="flow-node"><span class="flow-icon">📄</span>Terraform /<br />IaC modules</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><span class="flow-icon">✅</span>PR review<br />= change approval</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><span class="flow-icon">🛡️</span>Policy-as-code<br />(OPA / drift check)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><span class="flow-icon">🔄</span>GitOps sync<br />(ArgoCD)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><span class="flow-icon">📊</span>Live CMDB &amp;<br />audit dashboard</div>
+    </div>
+
+    <div class="pillar-cols">
+      <div class="pillar-col">
+        <h4>What gets automated</h4>
+        <ul class="check-list">
+          <li>Asset inventory generated from Terraform state — never manually updated, never stale</li>
+          <li>Change log = merged pull requests: who, what, why, and who approved, forever</li>
+          <li>Drift detection alerts when reality diverges from declared state</li>
+          <li>Compliance rules (tagging, encryption, region policy) enforced pre-merge by policy-as-code</li>
+          <li>Vendor &amp; license register tracked as versioned data with renewal alerts</li>
+        </ul>
+      </div>
+      <div class="pillar-col">
+        <h4>Manager's framing</h4>
+        <blockquote>“I replaced the Excel asset register with code. When the auditor asks who changed the firewall rule and who approved it, the answer is a Git query — not a week of interviews. We are audit-ready every day, not once a year.”</blockquote>
+        <div class="itil-badges">
+          <span class="itil-badge">ITIL 4 · Change Enablement</span>
+          <span class="itil-badge">ITIL 4 · Service Configuration Mgmt</span>
+          <span class="itil-badge">ITIL 4 · IT Asset Management</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kpi-strip">
+      <div class="kpi-strip-item"><strong>21d → 2d</strong><span>Audit evidence turnaround</span></div>
+      <div class="kpi-strip-item"><strong>100%</strong><span>Changes with traceable approval</span></div>
+      <div class="kpi-strip-item"><strong>0</strong><span>Undetected config drift incidents</span></div>
+    </div>
+  </div>
+</section>
+
+<nav class="page-pager container">
+  <a class="pager-link prev" href="index.html">← Home</a>
+  <a class="pager-link next" href="operations.html">Operations →</a>
+</nav>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="brand"><span class="brand-mark">▲</span> IT Command Center</p>
+      <p class="footer-note">A portfolio project demonstrating an IT management operating model for the AI agent era.<br />Built as code, reviewed as code, deployed as code — naturally.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">Source on GitHub</a>
+      <a href="itil.html">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
+    </div>
+  </div>
+  <p class="footer-fine container">© 2026 · KPI figures are targets from lab/reference implementations, representative of published industry benchmarks.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

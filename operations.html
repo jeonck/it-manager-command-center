@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incident Response & Resilient Operations — IT Command Center</title>
+  <meta name="description" content="Supervised AI agents handle the first 30 minutes of every incident: triage, diagnostics, briefing, ticket, and RCA draft — so MTTR drops without heroics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛰️</text></svg>" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">▲</span> IT&nbsp;Command&nbsp;Center</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="governance.html">Governance</a>
+      <a href="operations.html" aria-current="page">Operations</a>
+      <a href="finops.html">FinOps</a>
+      <a href="agent-model.html">AI Agent Model</a>
+      <a href="itil.html">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
+    </nav>
+    <a class="nav-cta" href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow ops">03 · INCIDENT RESPONSE &amp; RESILIENT OPERATIONS</p>
+    <h1>Self-triaging operations</h1>
+    <p class="lede">
+      <strong>Problem:</strong> the first 30 minutes of every incident are spent collecting the same logs,
+      pinging the same people, and writing the same status update.
+      <strong>Answer:</strong> let an agent do the first 30 minutes.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="hero-terminal" id="hero-terminal" aria-label="Simulated AI agent incident response console" style="margin-bottom: 48px;">
+      <div class="term-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="term-title">ops-agent — live incident response (simulated)</span>
+        <button class="term-replay" id="term-replay" type="button">↻ replay</button>
+      </div>
+      <pre class="term-body" id="term-body"></pre>
+    </div>
+
+    <div class="flow" role="img" aria-label="Incident automation pipeline: Prometheus alert to AI triage agent to diagnostics collection to Slack briefing and Jira ticket to human decision">
+      <div class="flow-node"><span class="flow-icon">📡</span>Observability<br />(Prometheus / Datadog)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><span class="flow-icon">🤖</span>Triage agent<br />classifies severity</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><span class="flow-icon">🔍</span>Auto-diagnostics<br />(logs, traces, deltas)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><span class="flow-icon">💬</span>Slack briefing +<br />Jira ticket w/ evidence</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><span class="flow-icon">🧑‍💼</span>Human approves<br />remediation</div>
+    </div>
+
+    <div class="pillar-cols">
+      <div class="pillar-col">
+        <h4>What gets automated</h4>
+        <ul class="check-list">
+          <li>Threshold breach triggers an agent that gathers logs, recent deploys, and metric deltas in seconds</li>
+          <li>Slack alert arrives as a <em>briefing</em> — probable cause, blast radius, suggested runbook — not a bare page</li>
+          <li>Jira ticket is pre-filled with a diagnostic bundle and timeline for the post-incident review</li>
+          <li>Known-pattern incidents get a remediation proposal; humans approve, agents execute, everything is logged</li>
+          <li>RCA drafts are generated from the incident timeline — problem management starts from data, not memory</li>
+        </ul>
+      </div>
+      <div class="pillar-col">
+        <h4>Manager's framing</h4>
+        <blockquote>“I don't measure how fast my team types kubectl. I measure MTTR, and I cut it by making the machine do detection, evidence collection, and paperwork — so engineers spend their minutes on judgment, not clipboard work.”</blockquote>
+        <div class="itil-badges">
+          <span class="itil-badge">ITIL 4 · Incident Management</span>
+          <span class="itil-badge">ITIL 4 · Problem Management</span>
+          <span class="itil-badge">ITIL 4 · Monitoring &amp; Event Mgmt</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kpi-strip">
+      <div class="kpi-strip-item"><strong>↓ 72%</strong><span>MTTR reduction</span></div>
+      <div class="kpi-strip-item"><strong>&lt; 2 min</strong><span>Human minutes spent per incident (median)</span></div>
+      <div class="kpi-strip-item"><strong>↓</strong><span>False-page rate</span></div>
+    </div>
+  </div>
+</section>
+
+<nav class="page-pager container">
+  <a class="pager-link prev" href="governance.html">← Governance</a>
+  <a class="pager-link next" href="finops.html">FinOps →</a>
+</nav>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="brand"><span class="brand-mark">▲</span> IT Command Center</p>
+      <p class="footer-note">A portfolio project demonstrating an IT management operating model for the AI agent era.<br />Built as code, reviewed as code, deployed as code — naturally.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">Source on GitHub</a>
+      <a href="itil.html">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
+    </div>
+  </div>
+  <p class="footer-fine container">© 2026 · KPI figures are targets from lab/reference implementations, representative of published industry benchmarks.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

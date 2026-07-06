@@ -19,16 +19,17 @@
 <!-- ══════════════════ NAV ══════════════════ -->
 <header class="nav" id="top">
   <div class="nav-inner">
-    <a class="brand" href="#top">
+    <a class="brand" href="index.html">
       <span class="brand-mark">▲</span> IT&nbsp;Command&nbsp;Center
     </a>
     <nav class="nav-links">
-      <a href="#executive-summary">Executive Summary</a>
-      <a href="#governance">Governance</a>
-      <a href="#operations">Operations</a>
-      <a href="#finops">FinOps</a>
-      <a href="#agent-model">AI Agent Model</a>
-      <a href="#itil">ITIL Mapping</a>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="governance.html">Governance</a>
+      <a href="operations.html">Operations</a>
+      <a href="finops.html">FinOps</a>
+      <a href="agent-model.html">AI Agent Model</a>
+      <a href="itil.html">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
     </nav>
     <a class="nav-cta" href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
@@ -47,7 +48,7 @@
     </p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#executive-summary">Read the Executive Summary</a>
-      <a class="btn btn-ghost" href="#agent-model">See the Agent Operating Model</a>
+      <a class="btn btn-ghost" href="agent-model.html">See the Agent Operating Model</a>
     </div>
     <div class="hero-terminal" id="hero-terminal" aria-label="Simulated AI agent incident response console">
       <div class="term-bar">
@@ -109,299 +110,57 @@
       </div>
       <div class="strip-item">
         <h4>The proof</h4>
-        <p>Three working domains below — each with the problem, the automated pipeline, the ITIL practice it implements, and the KPI it moves.</p>
+        <p>Three working domains, each with its own page — the problem, the automated pipeline, the ITIL practice it implements, and the KPI it moves.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════ PILLAR 1 · GOVERNANCE ══════════════════ -->
-<section class="section pillar" id="governance">
+<!-- ══════════════════ PAGE TEASER GRID ══════════════════ -->
+<section class="section alt" id="explore">
   <div class="container">
-    <div class="pillar-head">
-      <p class="eyebrow gov">02 · IT GOVERNANCE &amp; ASSET MANAGEMENT</p>
-      <h2>The audit-ready platform</h2>
-      <p class="section-lede">
-        <strong>Problem:</strong> asset inventories live in spreadsheets, change history lives in people's memories,
-        and every audit becomes a three-week archaeology dig.
-        <strong>Answer:</strong> make Git the system of record for the entire estate.
-      </p>
+    <p class="eyebrow">EXPLORE THE MODEL</p>
+    <h2>One page per domain — no endless scroll.</h2>
+    <p class="section-lede">Each area below is a focused, standalone page: the problem, the pipeline, the manager's framing, and the ITIL practice behind it.</p>
+
+    <div class="teaser-grid">
+      <a class="teaser-card" href="governance.html">
+        <span class="teaser-eyebrow gov">02 · GOVERNANCE</span>
+        <h3>The audit-ready platform</h3>
+        <p>Git as the system of record. Terraform → PR approval → policy-as-code → GitOps → live CMDB.</p>
+        <span class="teaser-go">Open page →</span>
+      </a>
+      <a class="teaser-card" href="operations.html">
+        <span class="teaser-eyebrow ops">03 · OPERATIONS</span>
+        <h3>Self-triaging operations</h3>
+        <p>Supervised agents handle the first 30 minutes of every incident — diagnostics, briefing, ticket, RCA draft.</p>
+        <span class="teaser-go">Open page →</span>
+      </a>
+      <a class="teaser-card" href="finops.html">
+        <span class="teaser-eyebrow fin">04 · FINOPS</span>
+        <h3>The budget as a control loop</h3>
+        <p>Cost treated like an SLO: idle reaping, anomaly paging, weekly savings ledger for leadership.</p>
+        <span class="teaser-go">Open page →</span>
+      </a>
+      <a class="teaser-card" href="agent-model.html">
+        <span class="teaser-eyebrow agent">05 · AGENT MODEL</span>
+        <h3>Agents do the work, humans own the risk</h3>
+        <p>Graduated autonomy, MCP-governed tools, kill switches, and KPIs — for the agents themselves.</p>
+        <span class="teaser-go">Open page →</span>
+      </a>
+      <a class="teaser-card" href="itil.html">
+        <span class="teaser-eyebrow itil">06 · ITIL MAPPING</span>
+        <h3>Automation with a management pedigree</h3>
+        <p>Every pipeline traced to the ITIL 4 practice it implements — and the KPI it moves.</p>
+        <span class="teaser-go">Open page →</span>
+      </a>
+      <a class="teaser-card" href="roadmap.html">
+        <span class="teaser-eyebrow road">07 · ROADMAP</span>
+        <h3>From spreadsheets to supervised autonomy</h3>
+        <p>A realistic 12-month adoption path — each quarter ships value on its own.</p>
+        <span class="teaser-go">Open page →</span>
+      </a>
     </div>
-
-    <div class="flow" role="img" aria-label="GitOps governance pipeline: Terraform to pull request review to CI policy checks to ArgoCD sync to live CMDB dashboard">
-      <div class="flow-node"><span class="flow-icon">📄</span>Terraform /<br />IaC modules</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node"><span class="flow-icon">✅</span>PR review<br />= change approval</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node"><span class="flow-icon">🛡️</span>Policy-as-code<br />(OPA / drift check)</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node"><span class="flow-icon">🔄</span>GitOps sync<br />(ArgoCD)</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node"><span class="flow-icon">📊</span>Live CMDB &amp;<br />audit dashboard</div>
-    </div>
-
-    <div class="pillar-cols">
-      <div class="pillar-col">
-        <h4>What gets automated</h4>
-        <ul class="check-list">
-          <li>Asset inventory generated from Terraform state — never manually updated, never stale</li>
-          <li>Change log = merged pull requests: who, what, why, and who approved, forever</li>
-          <li>Drift detection alerts when reality diverges from declared state</li>
-          <li>Compliance rules (tagging, encryption, region policy) enforced pre-merge by policy-as-code</li>
-          <li>Vendor &amp; license register tracked as versioned data with renewal alerts</li>
-        </ul>
-      </div>
-      <div class="pillar-col">
-        <h4>Manager's framing</h4>
-        <blockquote>“I replaced the Excel asset register with code. When the auditor asks who changed the firewall rule and who approved it, the answer is a Git query — not a week of interviews. We are audit-ready every day, not once a year.”</blockquote>
-        <div class="itil-badges">
-          <span class="itil-badge">ITIL 4 · Change Enablement</span>
-          <span class="itil-badge">ITIL 4 · Service Configuration Mgmt</span>
-          <span class="itil-badge">ITIL 4 · IT Asset Management</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════ PILLAR 2 · OPERATIONS ══════════════════ -->
-<section class="section pillar alt" id="operations">
-  <div class="container">
-    <div class="pillar-head">
-      <p class="eyebrow ops">03 · INCIDENT RESPONSE &amp; RESILIENT OPERATIONS</p>
-      <h2>Self-triaging operations</h2>
-      <p class="section-lede">
-        <strong>Problem:</strong> the first 30 minutes of every incident are spent collecting the same logs,
-        pinging the same people, and writing the same status update.
-        <strong>Answer:</strong> let an agent do the first 30 minutes.
-      </p>
-    </div>
-
-    <div class="flow" role="img" aria-label="Incident automation pipeline: Prometheus alert to AI triage agent to diagnostics collection to Slack briefing and Jira ticket to human decision">
-      <div class="flow-node"><span class="flow-icon">📡</span>Observability<br />(Prometheus / Datadog)</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node"><span class="flow-icon">🤖</span>Triage agent<br />classifies severity</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node"><span class="flow-icon">🔍</span>Auto-diagnostics<br />(logs, traces, deltas)</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node"><span class="flow-icon">💬</span>Slack briefing +<br />Jira ticket w/ evidence</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node"><span class="flow-icon">🧑‍💼</span>Human approves<br />remediation</div>
-    </div>
-
-    <div class="pillar-cols">
-      <div class="pillar-col">
-        <h4>What gets automated</h4>
-        <ul class="check-list">
-          <li>Threshold breach triggers an agent that gathers logs, recent deploys, and metric deltas in seconds</li>
-          <li>Slack alert arrives as a <em>briefing</em> — probable cause, blast radius, suggested runbook — not a bare page</li>
-          <li>Jira ticket is pre-filled with a diagnostic bundle and timeline for the post-incident review</li>
-          <li>Known-pattern incidents get a remediation proposal; humans approve, agents execute, everything is logged</li>
-          <li>RCA drafts are generated from the incident timeline — problem management starts from data, not memory</li>
-        </ul>
-      </div>
-      <div class="pillar-col">
-        <h4>Manager's framing</h4>
-        <blockquote>“I don't measure how fast my team types kubectl. I measure MTTR, and I cut it by making the machine do detection, evidence collection, and paperwork — so engineers spend their minutes on judgment, not clipboard work.”</blockquote>
-        <div class="itil-badges">
-          <span class="itil-badge">ITIL 4 · Incident Management</span>
-          <span class="itil-badge">ITIL 4 · Problem Management</span>
-          <span class="itil-badge">ITIL 4 · Monitoring &amp; Event Mgmt</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════ PILLAR 3 · FINOPS ══════════════════ -->
-<section class="section pillar" id="finops">
-  <div class="container">
-    <div class="pillar-head">
-      <p class="eyebrow fin">04 · FINOPS &amp; COST OPTIMIZATION</p>
-      <h2>The budget as a control loop</h2>
-      <p class="section-lede">
-        <strong>Problem:</strong> cloud bills are reviewed monthly, questioned quarterly, and understood never.
-        <strong>Answer:</strong> treat cost like an SLO — measured continuously, corrected automatically, reported in business terms.
-      </p>
-    </div>
-
-    <div class="flow" role="img" aria-label="FinOps loop: cost and usage data to anomaly and idle detection to automated action with approval to savings report">
-      <div class="flow-node"><span class="flow-icon">🧾</span>Cost &amp; usage data<br />(AWS CUR / Azure)</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node"><span class="flow-icon">🕵️</span>Idle &amp; anomaly<br />detection agent</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node"><span class="flow-icon">⚙️</span>Action: stop / resize /<br />schedule (with approval)</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node"><span class="flow-icon">📈</span>Weekly savings report<br />to leadership</div>
-    </div>
-
-    <div class="pillar-cols">
-      <div class="pillar-col">
-        <h4>What gets automated</h4>
-        <ul class="check-list">
-          <li>Idle resources (unattached volumes, zombie VMs, oversized nodes) identified daily and reaped on schedule</li>
-          <li>Non-production environments sleep on nights and weekends — automatically, reversibly</li>
-          <li>Cost anomalies page the owner with the resource, the delta, and the likely deploy that caused it</li>
-          <li>Unit economics tracked per team and per service: cost per environment, per deployment, per customer</li>
-          <li>Savings ledger shows realized vs. projected — the report leadership actually reads</li>
-        </ul>
-      </div>
-      <div class="pillar-col">
-        <h4>Manager's framing</h4>
-        <blockquote>“Modernization isn't a cost center story. Every automation here has a line item: this script returned 38% of our cloud budget. That is bottom-line impact a CFO can verify.”</blockquote>
-        <div class="itil-badges">
-          <span class="itil-badge">FinOps Foundation · Inform / Optimize / Operate</span>
-          <span class="itil-badge">ITIL 4 · Service Financial Mgmt</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════ AI AGENT OPERATING MODEL ══════════════════ -->
-<section class="section" id="agent-model">
-  <div class="container">
-    <p class="eyebrow">05 · THE AI AGENT OPERATING MODEL</p>
-    <h2>Agents do the work. Humans own the risk.</h2>
-    <p class="section-lede">
-      The 2026 shift isn't “AI writes code.” It's that <strong>operations itself is becoming agentic</strong> —
-      triage, remediation, cost hygiene, and compliance checks run as supervised agents.
-      The IT manager's new deliverable is the <strong>governance layer around them</strong>.
-    </p>
-
-    <div class="agent-grid">
-      <div class="agent-card">
-        <div class="agent-icon">🎚️</div>
-        <h4>Graduated autonomy</h4>
-        <p>Agents earn permissions like employees do. Read-only diagnostics first; reversible actions with approval next; auto-remediation only for proven, low-blast-radius patterns.</p>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon">🧾</div>
-        <h4>Every action is a change record</h4>
-        <p>Agent actions flow through the same PR/approval pipeline as human changes. An agent that can't produce an audit trail doesn't get production access. Ever.</p>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon">🔌</div>
-        <h4>Tools over prompts (MCP)</h4>
-        <p>Agents reach systems through governed tool interfaces — Model Context Protocol servers with scoped credentials — not through pasted API keys and hope.</p>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon">🧯</div>
-        <h4>Kill switches &amp; blast-radius budgets</h4>
-        <p>Every automation has a disable flag, a rate limit, and a maximum scope. The failure mode of an agent must always be “stopped,” never “creative.”</p>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon">📏</div>
-        <h4>Agents get KPIs too</h4>
-        <p>Precision of triage, false-page rate, savings realized, evidence completeness. If an agent's numbers slip, it gets retrained or retired — same as any process.</p>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon">🧑‍⚖️</div>
-        <h4>Human-in-the-loop by design</h4>
-        <p>Approval gates live where the risk lives: production changes, spend actions, customer-facing comms. Humans decide; agents execute and document.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════ ITIL MAPPING ══════════════════ -->
-<section class="section alt" id="itil">
-  <div class="container">
-    <p class="eyebrow">06 · ITIL 4 PRACTICE MAPPING</p>
-    <h2>Automation with a management pedigree</h2>
-    <p class="section-lede">
-      Every pipeline above is an implementation of an established ITIL 4 practice — automation doesn't replace process discipline, it enforces it.
-    </p>
-    <div class="table-wrap">
-      <table class="itil-table">
-        <thead>
-          <tr><th>ITIL 4 Practice</th><th>Traditional form</th><th>Implemented here as</th><th>KPI moved</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Practice">Change Enablement</td>
-            <td data-label="Traditional">CAB meetings, change forms</td>
-            <td data-label="Here">Pull-request review + policy-as-code gates; merge = approved change</td>
-            <td data-label="KPI">100% traceable changes, near-zero unauthorized drift</td>
-          </tr>
-          <tr>
-            <td data-label="Practice">Service Configuration &amp; Asset Mgmt</td>
-            <td data-label="Traditional">CMDB updated by hand, quarterly true-ups</td>
-            <td data-label="Here">CMDB generated from IaC state; drift detection reconciles continuously</td>
-            <td data-label="KPI">Audit evidence in days, not weeks</td>
-          </tr>
-          <tr>
-            <td data-label="Practice">Incident Management</td>
-            <td data-label="Traditional">Pager → war room → tribal knowledge</td>
-            <td data-label="Here">Agent triage → evidence bundle → pre-filled ticket → approved remediation</td>
-            <td data-label="KPI">MTTR ↓ 72%, false pages ↓</td>
-          </tr>
-          <tr>
-            <td data-label="Practice">Problem Management</td>
-            <td data-label="Traditional">RCA doc written weeks later, if ever</td>
-            <td data-label="Here">RCA draft generated from incident timeline within the hour</td>
-            <td data-label="KPI">Repeat-incident rate ↓</td>
-          </tr>
-          <tr>
-            <td data-label="Practice">Monitoring &amp; Event Mgmt</td>
-            <td data-label="Traditional">Static thresholds, alert fatigue</td>
-            <td data-label="Here">SLO-based alerting; agents suppress noise and enrich signal</td>
-            <td data-label="KPI">Actionable-alert ratio ↑</td>
-          </tr>
-          <tr>
-            <td data-label="Practice">Service Financial Mgmt</td>
-            <td data-label="Traditional">Monthly bill review, annual budget shock</td>
-            <td data-label="Here">Continuous FinOps loop: detect → act (with approval) → report savings weekly</td>
-            <td data-label="KPI">Cloud spend ↓ 38%, forecast accuracy ↑</td>
-          </tr>
-          <tr>
-            <td data-label="Practice">Supplier Management</td>
-            <td data-label="Traditional">Contracts in a shared drive</td>
-            <td data-label="Here">Vendor &amp; license register as versioned data with renewal/expiry automation</td>
-            <td data-label="KPI">Zero surprise renewals, license compliance</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════ MATURITY ROADMAP ══════════════════ -->
-<section class="section" id="roadmap">
-  <div class="container">
-    <p class="eyebrow">07 · ADOPTION ROADMAP</p>
-    <h2>From spreadsheets to supervised autonomy</h2>
-    <p class="section-lede">A realistic 12-month path — each stage ships value on its own and de-risks the next.</p>
-    <ol class="roadmap">
-      <li class="roadmap-step">
-        <span class="step-q">Q1</span>
-        <div>
-          <h4>Codify the estate</h4>
-          <p>Import existing infrastructure into Terraform; stand up the GitOps pipeline; asset register goes live from state. <em>First win: audit evidence on demand.</em></p>
-        </div>
-      </li>
-      <li class="roadmap-step">
-        <span class="step-q">Q2</span>
-        <div>
-          <h4>Instrument &amp; alert on SLOs</h4>
-          <p>Observability stack with SLO-based alerting; incident tickets auto-created with context. <em>First win: no more blank tickets at 3 a.m.</em></p>
-        </div>
-      </li>
-      <li class="roadmap-step">
-        <span class="step-q">Q3</span>
-        <div>
-          <h4>Close the FinOps loop</h4>
-          <p>Idle reaping and off-hours scheduling in enforcement mode; weekly savings ledger to leadership. <em>First win: measurable budget return.</em></p>
-        </div>
-      </li>
-      <li class="roadmap-step">
-        <span class="step-q">Q4</span>
-        <div>
-          <h4>Introduce supervised agents</h4>
-          <p>Triage and diagnostics agents in read-only mode → approval-gated remediation for proven patterns. <em>First win: MTTR drops without headcount.</em></p>
-        </div>
-      </li>
-    </ol>
   </div>
 </section>
 
@@ -414,8 +173,8 @@
     </div>
     <div class="footer-links">
       <a href="https://github.com/jeonck/it-manager-command-center" target="_blank" rel="noopener">Source on GitHub</a>
-      <a href="#executive-summary">Executive Summary</a>
-      <a href="#itil">ITIL Mapping</a>
+      <a href="itil.html">ITIL Mapping</a>
+      <a href="roadmap.html">Roadmap</a>
     </div>
   </div>
   <p class="footer-fine container">© 2026 · KPI figures are targets from lab/reference implementations, representative of published industry benchmarks.</p>

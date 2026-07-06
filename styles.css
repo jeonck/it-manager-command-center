@@ -42,6 +42,9 @@ h4 { font-size: 1.05rem; font-weight: 700; }
 .eyebrow.gov { color: var(--gov); }
 .eyebrow.ops { color: var(--ops); }
 .eyebrow.fin { color: var(--fin); }
+.eyebrow.agent { color: var(--accent-2); }
+.eyebrow.itil { color: var(--accent); }
+.eyebrow.road { color: var(--ops); }
 
 .section { padding: 96px 0; }
 .section.alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -64,6 +67,7 @@ h4 { font-size: 1.05rem; font-weight: 700; }
 .nav-links { display: flex; gap: 22px; margin-left: auto; }
 .nav-links a { color: var(--muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
 .nav-links a:hover { color: var(--text); }
+.nav-links a[aria-current="page"] { color: var(--accent-2); }
 .nav-cta {
   font-size: 0.85rem; font-weight: 600; padding: 8px 16px;
   border: 1px solid var(--line); border-radius: 999px; transition: border-color 0.2s;
@@ -218,6 +222,58 @@ blockquote {
 .itil-table tr:last-child td { border-bottom: none; }
 .itil-table tr:hover td { background: var(--panel-2); }
 
+/* ═══════════════════ PAGE HERO (sub-pages) ═══════════════════ */
+.page-hero { padding: 150px 0 60px; position: relative; }
+.page-hero .lede { max-width: 760px; color: var(--muted); font-size: 1.05rem; }
+.page-hero .lede strong { color: var(--text); }
+.page-hero h1 { font-size: clamp(2rem, 4.4vw, 3rem); font-weight: 800; margin-bottom: 18px; }
+
+/* ═══════════════════ TEASER GRID (home page links) ═══════════════════ */
+.teaser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.teaser-card {
+  display: block; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px 24px; transition: transform 0.2s, border-color 0.2s;
+}
+.teaser-card:hover { transform: translateY(-4px); border-color: rgba(109, 139, 255, 0.4); }
+.teaser-eyebrow {
+  display: inline-block; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em;
+  margin-bottom: 12px; color: var(--accent);
+}
+.teaser-eyebrow.gov { color: var(--gov); }
+.teaser-eyebrow.ops { color: var(--ops); }
+.teaser-eyebrow.fin { color: var(--fin); }
+.teaser-eyebrow.agent { color: var(--accent-2); }
+.teaser-eyebrow.itil { color: var(--accent); }
+.teaser-eyebrow.road { color: var(--ops); }
+.teaser-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+.teaser-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 16px; }
+.teaser-go { font-family: var(--mono); font-size: 0.78rem; color: var(--accent); font-weight: 600; }
+
+/* ═══════════════════ KPI STRIP (sub-page bottom summary) ═══════════════════ */
+.kpi-strip {
+  display: flex; gap: 14px; flex-wrap: wrap; margin-top: 44px;
+  border-top: 1px solid var(--line); padding-top: 32px;
+}
+.kpi-strip-item {
+  flex: 1 1 180px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  padding: 18px 20px; text-align: center;
+}
+.kpi-strip-item strong { display: block; font-size: 1.6rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.kpi-strip-item span { font-size: 0.82rem; color: var(--muted); }
+
+/* ═══════════════════ PAGE PAGER (prev/next) ═══════════════════ */
+.page-pager {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 32px 24px 60px; gap: 16px;
+}
+.pager-link {
+  font-weight: 600; font-size: 0.92rem; padding: 10px 20px;
+  border: 1px solid var(--line); border-radius: 10px; transition: border-color 0.2s, color 0.2s;
+  color: var(--muted);
+}
+.pager-link:hover { border-color: var(--accent); color: var(--text); }
+.pager-link.next { margin-left: auto; }
+
 /* ═══════════════════ ROADMAP ═══════════════════ */
 .roadmap { list-style: none; display: grid; gap: 0; position: relative; }
 .roadmap-step {
@@ -250,14 +306,18 @@ blockquote {
 @media (max-width: 960px) {
   .kpi-grid { grid-template-columns: repeat(2, 1fr); }
   .agent-grid { grid-template-columns: repeat(2, 1fr); }
+  .teaser-grid { grid-template-columns: repeat(2, 1fr); }
   .pillar-cols { grid-template-columns: 1fr; gap: 28px; }
   .summary-strip { grid-template-columns: 1fr; }
   .nav-links { display: none; }
 }
 @media (max-width: 600px) {
   .section { padding: 64px 0; }
-  .kpi-grid, .agent-grid { grid-template-columns: 1fr; }
+  .page-hero { padding: 128px 0 40px; }
+  .kpi-grid, .agent-grid, .teaser-grid { grid-template-columns: 1fr; }
   .flow { flex-direction: column; }
   .flow-arrow { transform: rotate(90deg); }
   .flow-node { min-width: 0; }
+  .page-pager { flex-direction: column; align-items: stretch; }
+  .pager-link.next { margin-left: 0; }
 }
